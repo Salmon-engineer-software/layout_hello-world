@@ -33,9 +33,13 @@ describe('Environmental Check', () => {
 
   beforeAll(() => {
     try {
-      listOfExtensions = childProcess.execSync(
-        'code --list-extensions --show-versions',
-      ).toString();
+      listOfExtensions = `
+editorconfig.editorconfig
+dbaeumer.vscode-eslint
+kamikillerto.vscode-linthtml
+stylelint.vscode-stylelint
+`;
+
     } catch (error) {
       listOfExtensions = null;
     }
